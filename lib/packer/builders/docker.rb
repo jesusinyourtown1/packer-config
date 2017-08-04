@@ -9,9 +9,12 @@ module Packer
         super
         self.data['type'] = DOCKER
         self.add_required(
-          'export_path',
           'image'
         )
+      end
+
+      def commit(bool)
+        self.__add_boolean('commit', bool)
       end
 
       def export_path(path)

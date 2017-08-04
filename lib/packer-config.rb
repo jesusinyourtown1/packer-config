@@ -74,9 +74,9 @@ module Packer
         end
       end
       unless self.postprocessors.empty?
-        data_copy['post-processors'] = []
+        data_copy['post-processors'] = [[]]
         self.postprocessors.each do |thing|
-          data_copy['post-processors'].push(thing.deep_copy)
+          data_copy['post-processors'][0].push(thing.deep_copy)
         end
       end
       case format
