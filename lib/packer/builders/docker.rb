@@ -32,6 +32,10 @@ module Packer
       def run_command(commands)
         self.__add_array_of_strings('run_command', commands)
       end
+
+      def changes(changes)
+        self.__add_array_of_strings('changes', changes)
+      end
     end
   end
 end
